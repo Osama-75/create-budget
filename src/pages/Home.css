@@ -72,3 +72,28 @@ table a {
     scale: 1.1;
     background-color: brown;
 }
+
+.sum {
+    display: flex;
+    flex-direction: column;
+}
+
+.sum-title, .sum-qun{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.sum-title span, .sum-qun span {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.sum-title span {
+    background-color: goldenrod;
+    font-weight: 700;
+}
+.sum-qun span{
+    background-color: rgb(22, 22, 22);
+    color: white;
+}

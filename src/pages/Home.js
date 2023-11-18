@@ -11,6 +11,28 @@ import Table from "../components/Table";
 export default function Home() {
     const budgets = fetchData("budgets");
     const expenses = fetchData("expenses");
+
+
+    let butTot = [];
+    
+    for (let i = 0; i < budgets.length; i++) {
+        butTot.push ( parseInt(budgets[i]?.amount)) ;
+    }
+    let budgetTotel = butTot.reduce(function (acc, curr) {
+        return acc + curr ;
+    })
+    console.log(budgetTotel);
+
+    let expTot = [];
+    
+    for (let i = 0; i < expenses.length; i++) {
+        expTot.push ( parseInt(expenses[i]?.amount)) ;
+    }
+    let expenseTotel = expTot.reduce(function (acc, curr) {
+        return acc + curr ;
+    })
+    console.log(expenseTotel);
+    
     return (
         <div >
             <Nav />
@@ -40,6 +62,19 @@ export default function Home() {
                                         </div>
                                     )
                                 }
+                                <h2>Summary</h2>
+                                <div className="sum">
+                                    <div className="sum-title">
+                                        <span>Income</span>
+                                        <span>Expense</span>
+                                        <span>Totle</span>
+                                    </div>
+                                    <div className="sum-qun">
+                                        <span>{budgetTotel}</span>
+                                        <span>{expenseTotel}</span>
+                                        <span>{budgetTotel-expenseTotel}</span>
+                                    </div>
+                                </div>
                             </div>
                             )
                             : (
