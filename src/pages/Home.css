@@ -1,0 +1,74 @@
+/* dashboard */
+.home {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    place-items: start;
+    width: 100%;
+    
+}
+
+.budgets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+}
+
+tr:nth-child(odd) {
+    background-color: hsl(var(--accent) / 0.04);
+}
+
+td {
+    border: none;
+    font-size: var(--fs-200);
+}
+
+thead > tr:nth-child(odd) {
+    background-color: hsl(var(--bkg));
+}
+
+td,
+th {
+    text-align: center;
+    padding: var(--space-xs);
+}
+table .btn {
+    margin-inline: auto;
+}
+
+
+
+table a {
+    text-decoration: none;
+    color: hsl(var(--bkg));
+    background-color: hsl(var(--accent));
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--round-full);
+}
+
+
+.budpage {
+    padding: var(--space-xl);
+}
+
+.del-btn {
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: rgb(185, 42, 42);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.del-btn:hover {
+    scale: 1.1;
+    background-color: brown;
+}

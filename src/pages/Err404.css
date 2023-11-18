@@ -1,0 +1,27 @@
+.error {
+    place-self: center;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: var(--space-lg);
+    padding-block: var(--space-lg);
+    text-align: center;
+}
+
+.btn {
+    --color: hsl(var(--bkg));
+    background-color: var(--backdrop);
+    color: var(--color);
+    padding: var(--space-xs) var(--space-sm);
+    border: 2px solid var(--backdrop);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+.btn--dark {
+    --backdrop: hsl(var(--text));
+}
