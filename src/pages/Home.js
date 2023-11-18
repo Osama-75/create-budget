@@ -15,7 +15,7 @@ export default function Home() {
 
     let butTot = [];
     
-    for (let i = 0; i < budgets.length; i++) {
+    for (let i = 0; i < budgets?.length; i++) {
         butTot.push ( parseInt(budgets[i]?.amount)) ;
     }
     let budgetTotel = butTot.reduce(function (acc, curr) {
@@ -25,7 +25,7 @@ export default function Home() {
 
     let expTot = [];
     
-    for (let i = 0; i < expenses.length; i++) {
+    for (let i = 0; i < expenses?.length; i++) {
         expTot.push ( parseInt(expenses[i]?.amount)) ;
     }
     let expenseTotel = expTot.reduce(function (acc, curr) {
@@ -39,7 +39,7 @@ export default function Home() {
             <div className="home">
                 <h1>Welcome</h1>
                 <div className="grid-sm">
-                    {budgets && budgets.length > 0
+                    {budgets && budgets?.length > 0
                             ? (
                             <div className="grid-lg">
                                 <div className="flex-lg">
@@ -55,7 +55,7 @@ export default function Home() {
                                     }
                                 </div>
                                 {
-                                    expenses && expenses.length > 0 && (
+                                    expenses && expenses?.length > 0 && (
                                         <div className="grid-md">
                                             <h2>Recent Expenses</h2>
                                             <Table expenses={expenses} />
