@@ -20,7 +20,7 @@ export default function Home() {
     }
     let budgetTotel = butTot.reduce(function (acc, curr) {
         return acc + curr ;
-    })
+    },0)
     console.log(budgetTotel);
 
     let expTot = [];
@@ -30,7 +30,7 @@ export default function Home() {
     }
     let expenseTotel = expTot.reduce(function (acc, curr) {
         return acc + curr ;
-    })
+    },0)
     console.log(expenseTotel);
     
     return (
