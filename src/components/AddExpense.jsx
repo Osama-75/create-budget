@@ -7,7 +7,7 @@ export default function AddExpense(budgets) {
 
     const [name, setName] = useState("");
     const [amount, setAmount] = useState("");
-    const [budgetId, setBudgetId] = useState("");
+    const [budgetId, setBudgetId] = useState(budgets?.budgets[0].id);
 
     async function handleSubmit(e) {
         e.preventDefault();
